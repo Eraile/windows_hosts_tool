@@ -3,4 +3,4 @@ Tool to manage your hosts file and not care anymore about copy the hosts file on
 
 ![](README_content/hosts.png)
 
-[More complete online documentation](https://eraile.github.io/windows_hosts_tool/
+[More complete online documentation](https://eraile.github.io/windows_hosts_tool/)

@@ -1,0 +1,727 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Manual</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css" />
+  <style>
+    body { overflow-x: hidden; }
+    .sidebar { position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow-y: auto; }
+    .sidebar .nav-link { white-space: nowrap; cursor: pointer; }
+    .section-heading { padding-top: 2rem; margin-top: -2rem; display: none; }
+    .section-heading.active { display: block; }
+    .subsection-list { margin-bottom: 1rem; }
+    .subsection-list li { list-style: none; margin-left: 1rem; }
+    .breadcrumb { background: none; padding-left: 0; }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-3 col-lg-2 d-none d-md-block bg-light sidebar py-4">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" data-target="section-home">Manual</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="section-1.">1. Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="section-2.">2. Getting Started</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="section-3.">3. Core Concepts</a>
+              <ul class="nav flex-column ms-3">
+                <li class="nav-item">
+                  <a class="nav-link" data-target="section-3.1">3.1 Hostname and IP Address Relationship</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-target="section-3.2">3.2 Data Structure</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="section-4.">4. Workflows &amp; Tutorials</a>
+              <ul class="nav flex-column ms-3">
+                <li class="nav-item">
+                  <a class="nav-link" data-target="section-4.1">4.1 Adding Hostname Information</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-target="section-4.2">4.2 Retrieving Hostname Information</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-target="section-4.3">4.3 Applying Changes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-target="section-4.4">4.4 Removing Hostname Information</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="section-5.">5. Advanced Topics</a>
+              <ul class="nav flex-column ms-3">
+                <li class="nav-item">
+                  <a class="nav-link" data-target="section-5.1">5.1 Error Handling</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-target="section-5.2">5.2 UI Integration</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-target="section-5.3">5.3 DataGridView Functionality</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="section-6.">6. Troubleshooting &amp; FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="section-7.">7. Appendix</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="section-8.">8. Application Architecture</a>
+              <ul class="nav flex-column ms-3">
+                <li class="nav-item">
+                  <a class="nav-link" data-target="section-8.1">8.1 Application Initialization</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-target="section-8.2">8.2 Main Form Execution</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-target="section-8.3">8.3 Resource Management</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-target="section-8.4">8.4 Application Settings Management</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <main role="main" class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+        <div class="lang-switcher mb-3">
+          <span>Language: </span>
+          <span class="active-lang">EN</span>
+          <span>|</span>
+          <a href="./../fr/manual.fr.html">FR</a>
+          <span>|</span>
+          <a href="./../es/manual.es.html">ES</a>
+          <span>|</span>
+          <a href="./../pl/manual.pl.html">PL</a>
+        </div>
+        <section id="section-home" class="section-heading">
+          <h2>Manual</h2>
+          <p>Select a topic to view its content:</p>
+          <ul class="subsection-list">
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-1.">1. Overview</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-2.">2. Getting Started</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-3.">3. Core Concepts</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-4.">4. Workflows &amp; Tutorials</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-5.">5. Advanced Topics</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-6.">6. Troubleshooting &amp; FAQ</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-7.">7. Appendix</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-8.">8. Application Architecture</a></li>
+          </ul>
+        </section>
+        <section id="section-1." class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item active" aria-current="page">1. Overview</li>
+            </ol>
+          </nav>
+          <h2>1. Overview</h2>
+          <div class="accordion mb-4" id="accordion-1.">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-1.-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1.-1" aria-expanded="false" aria-controls="collapse-1.-1">
+                  What is the primary purpose of the windows_hosts_tool?
+                </button>
+              </h2>
+              <div id="collapse-1.-1" class="accordion-collapse collapse" aria-labelledby="heading-1.-1" data-bs-parent="#accordion-1.">
+                <div class="accordion-body">
+                  <p>The primary purpose of the <strong>windows_hosts_tool</strong> is to effectively manage hostnames and their associated IP addresses on a Windows system. This tool provides users with the ability to:</p>
+                  <p>- &#128295; <strong>View</strong> existing hostname and IP address mappings.</p>
+                  <p>- ✨ <strong>Add</strong> new hostname entries easily.</p>
+                  <p>- ✅ <strong>Modify</strong> existing hostname configurations.</p>
+                  <p>- ❌ <strong>Remove</strong> unwanted hostname entries.</p>
+                  <p>By offering a user-friendly interface, the windows_hosts_tool simplifies the configuration of network settings, making it an essential utility for managing the Windows hosts file.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-2." class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item active" aria-current="page">2. Getting Started</li>
+            </ol>
+          </nav>
+          <h2>2. Getting Started</h2>
+          <div class="accordion mb-4" id="accordion-2.">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-2.-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2.-1" aria-expanded="false" aria-controls="collapse-2.-1">
+                  How do I set up the windows_hosts_tool for the first time?
+                </button>
+              </h2>
+              <div id="collapse-2.-1" class="accordion-collapse collapse" aria-labelledby="heading-2.-1" data-bs-parent="#accordion-2.">
+                <div class="accordion-body">
+                  <p>To set up the windows_hosts_tool for the first time, follow these steps:</p>
+                  <p>- ✅ <strong>Download the Application</strong>: Obtain the windows_hosts_tool application files from the official source.</p>
+                  <p>- &#128194; <strong>Extract the Files</strong>: Unzip the downloaded files to a desired directory on your system.</p>
+                  <p>- &#128295; <strong>Install .NET Framework</strong>: Ensure that the .NET Framework (version 4.0 or higher) is installed on your machine. If not, download and install it.</p>
+                  <p>- &#128736;️ <strong>Permissions</strong>: Make sure you have the necessary permissions to modify system settings, particularly the Windows hosts file located at `C:/Windows/System32/drivers/etc/hosts`.</p>
+                  <p>- ▶️ <strong>Run the Executable</strong>: Navigate to the extracted folder and run the application executable to launch the windows_hosts_tool.</p>
+                  <p>By following these steps, you will be able to successfully set up the windows_hosts_tool and start using it.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-3." class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item active" aria-current="page">3. Core Concepts</li>
+            </ol>
+          </nav>
+          <h2>3. Core Concepts</h2>
+          <ul class="subsection-list">
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-3.1">3.1 Hostname and IP Address Relationship</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-3.2">3.2 Data Structure</a></li>
+          </ul>
+        </section>
+        <section id="section-3.1" class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-3.">3. Core Concepts</a></li>
+              <li class="breadcrumb-item active" aria-current="page">3.1 Hostname and IP Address Relationship</li>
+            </ol>
+          </nav>
+          <h3>3.1 Hostname and IP Address Relationship</h3>
+          <div class="accordion mb-4" id="accordion-3.1">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-3.1-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3.1-1" aria-expanded="false" aria-controls="collapse-3.1-1">
+                  How does the `HostnameInfos` class represent the relationship between a hostname and its IP address?
+                </button>
+              </h2>
+              <div id="collapse-3.1-1" class="accordion-collapse collapse" aria-labelledby="heading-3.1-1" data-bs-parent="#accordion-3.1">
+                <div class="accordion-body">
+                  <p>The `HostnameInfos` class represents the relationship between a hostname and its IP address in the following ways:</p>
+                  <p>- <strong>Encapsulation</strong>: It encapsulates both the hostname and its corresponding IP address as properties within a single object. This design simplifies the management of hostname-IP pairs. &#127991;️</p>
+                  <p>- <strong>Ease of Management</strong>: By combining these two pieces of information, the class allows for easy manipulation and retrieval of hostname-IP data, enhancing usability and efficiency. &#128295;</p>
+                  <p>- <strong>Single Object Representation</strong>: The class serves as a cohesive unit, making it straightforward to handle and interact with hostname and IP address relationships. ✅</p>
+                  <p>Overall, the `HostnameInfos` class provides a structured approach to managing hostname and IP address associations effectively. ✨</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-3.2" class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-3.">3. Core Concepts</a></li>
+              <li class="breadcrumb-item active" aria-current="page">3.2 Data Structure</li>
+            </ol>
+          </nav>
+          <h3>3.2 Data Structure</h3>
+          <div class="accordion mb-4" id="accordion-3.2">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-3.2-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3.2-1" aria-expanded="false" aria-controls="collapse-3.2-1">
+                  What are the key fields in the `HostnameInfos` class and what do they represent?
+                </button>
+              </h2>
+              <div id="collapse-3.2-1" class="accordion-collapse collapse" aria-labelledby="heading-3.2-1" data-bs-parent="#accordion-3.2">
+                <div class="accordion-body">
+                  <p>The `HostnameInfos` class contains key fields that are essential for managing network configurations. Here are the primary fields:</p>
+                  <p>- <strong>Hostname</strong>: Represents the name of the host. This is the identifier used to refer to a specific machine on the network. &#127760;</p>
+                  <p>- <strong>IPAddress</strong>: Represents the IP address associated with the hostname. This field is crucial for routing network traffic to the correct destination. &#128225;</p>
+                  <p>These fields work together to ensure proper identification and management of network resources, making them vital for applications that handle hostname and IP address configurations. &#128295;✨</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-4." class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item active" aria-current="page">4. Workflows &amp; Tutorials</li>
+            </ol>
+          </nav>
+          <h2>4. Workflows &amp; Tutorials</h2>
+          <ul class="subsection-list">
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-4.1">4.1 Adding Hostname Information</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-4.2">4.2 Retrieving Hostname Information</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-4.3">4.3 Applying Changes</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-4.4">4.4 Removing Hostname Information</a></li>
+          </ul>
+        </section>
+        <section id="section-4.1" class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-4.">4. Workflows &amp; Tutorials</a></li>
+              <li class="breadcrumb-item active" aria-current="page">4.1 Adding Hostname Information</li>
+            </ol>
+          </nav>
+          <h3>4.1 Adding Hostname Information</h3>
+          <div class="accordion mb-4" id="accordion-4.1">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-4.1-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4.1-1" aria-expanded="false" aria-controls="collapse-4.1-1">
+                  What is the process for adding a new hostname and its associated IP address using the `HostnameInfos` class?
+                </button>
+              </h2>
+              <div id="collapse-4.1-1" class="accordion-collapse collapse" aria-labelledby="heading-4.1-1" data-bs-parent="#accordion-4.1">
+                <div class="accordion-body">
+                  <p>To add a new hostname and its associated IP address using the `HostnameInfos` class, follow these steps:</p>
+                  <p>- <strong>Create an Instance</strong>: Start by creating a new instance of the `HostnameInfos` class. &#127381;</p>
+                  <p>- <strong>Set Properties</strong>: Assign the desired hostname and IP address to the `Hostname` and `IPAddress` properties of the instance. &#127991;️</p>
+                  <p>- <strong>Add to Collection</strong>: Add this instance to a collection that manages all hostname entries, ensuring it is stored properly for future reference. &#128218;</p>
+                  <p>- <strong>User Interface Interaction</strong>: In the application, users can input the hostname and IP address directly into the DataGridView interface and click the &#39;Apply&#39; button to save the changes. &#128190;</p>
+                  <p>By following these steps, users can effectively manage hostnames and their corresponding IP addresses within the application. ✅</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-4.2" class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-4.">4. Workflows &amp; Tutorials</a></li>
+              <li class="breadcrumb-item active" aria-current="page">4.2 Retrieving Hostname Information</li>
+            </ol>
+          </nav>
+          <h3>4.2 Retrieving Hostname Information</h3>
+          <div class="accordion mb-4" id="accordion-4.2">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-4.2-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4.2-1" aria-expanded="false" aria-controls="collapse-4.2-1">
+                  How can users retrieve and display hostname information in the application?
+                </button>
+              </h2>
+              <div id="collapse-4.2-1" class="accordion-collapse collapse" aria-labelledby="heading-4.2-1" data-bs-parent="#accordion-4.2">
+                <div class="accordion-body">
+                  <p>Users can retrieve and display hostname information in the application through the following methods:</p>
+                  <p>- &#128194; <strong>Loading Existing Hosts File</strong>: The application loads the existing hosts file into a `DataGridView` at startup, showing current hostname and IP address mappings. This provides immediate visibility into the existing configurations.</p>
+                  <p>- &#128279; <strong>Binding Hostname Collection</strong>: Users can access a collection of `HostnameInfos` instances and bind this data to user interface components, such as a `DataGridView`. This allows for dynamic interaction with the hostname information.</p>
+                  <p>- &#128736;️ <strong>Populating DataGridView</strong>: The application populates the `DataGridView` with instances of the `HostnameInfos` class, enabling users to view and interact with a comprehensive list of hostnames and their corresponding IP addresses.</p>
+                  <p>By utilizing these methods, users can effectively manage and display hostname information within the application, enhancing their ability to configure and monitor network settings. ✨</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-4.3" class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-4.">4. Workflows &amp; Tutorials</a></li>
+              <li class="breadcrumb-item active" aria-current="page">4.3 Applying Changes</li>
+            </ol>
+          </nav>
+          <h3>4.3 Applying Changes</h3>
+          <div class="accordion mb-4" id="accordion-4.3">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-4.3-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4.3-1" aria-expanded="false" aria-controls="collapse-4.3-1">
+                  What happens when the user clicks the &quot;Apply&quot; button in the `MainForm`?
+                </button>
+              </h2>
+              <div id="collapse-4.3-1" class="accordion-collapse collapse" aria-labelledby="heading-4.3-1" data-bs-parent="#accordion-4.3">
+                <div class="accordion-body">
+                  <p>When the user clicks the &quot;Apply&quot; button in the `MainForm`, the following actions take place:</p>
+                  <p>- &#128221; <strong>Data Gathering</strong>: The application collects the current hostname and IP address data from the DataGridView.</p>
+                  <p>- &#128260; <strong>Processing Changes</strong>: It processes the list of hostname entries, applying any modifications made by the user.</p>
+                  <p>- ✅ <strong>Validation</strong>: The application typically validates the entered hostname and IP address to ensure they meet the required format.</p>
+                  <p>- &#128190; <strong>Updating Storage</strong>: The new content is constructed and written back to the original hosts file, effectively updating it and saving any changes to persistent storage.</p>
+                  <p>- ⚙️ <strong>System Configuration</strong>: The changes are applied to the system settings as needed, ensuring that the new hostname and IP address configurations take effect.</p>
+                  <p>This comprehensive process ensures that user modifications are accurately reflected in the system&#39;s configuration.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-4.4" class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-4.">4. Workflows &amp; Tutorials</a></li>
+              <li class="breadcrumb-item active" aria-current="page">4.4 Removing Hostname Information</li>
+            </ol>
+          </nav>
+          <h3>4.4 Removing Hostname Information</h3>
+          <div class="accordion mb-4" id="accordion-4.4">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-4.4-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4.4-1" aria-expanded="false" aria-controls="collapse-4.4-1">
+                  How can users remove a hostname and its associated IP address from the list?
+                </button>
+              </h2>
+              <div id="collapse-4.4-1" class="accordion-collapse collapse" aria-labelledby="heading-4.4-1" data-bs-parent="#accordion-4.4">
+                <div class="accordion-body">
+                  <p>Users can remove a hostname and its associated IP address from the list by following these steps:</p>
+                  <p>- <strong>Select the Entry</strong>: Click on the desired hostname entry in the user interface&#39;s `DataGridView`. &#128433;️</p>
+                  <p>- <strong>Click the &#39;Remove&#39; Button</strong>: Press the &#39;Remove&#39; button, which is typically located near the `DataGridView`. &#128280;</p>
+                  <p>- <strong>Update the Collection</strong>: This action triggers the deletion of the selected entry from the underlying data structure, effectively removing the corresponding `HostnameInfos` instance. &#128465;️</p>
+                  <p>By performing these steps, users can efficiently manage their hostname and IP address list. ✅</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-5." class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item active" aria-current="page">5. Advanced Topics</li>
+            </ol>
+          </nav>
+          <h2>5. Advanced Topics</h2>
+          <ul class="subsection-list">
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-5.1">5.1 Error Handling</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-5.2">5.2 UI Integration</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-5.3">5.3 DataGridView Functionality</a></li>
+          </ul>
+        </section>
+        <section id="section-5.1" class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-5.">5. Advanced Topics</a></li>
+              <li class="breadcrumb-item active" aria-current="page">5.1 Error Handling</li>
+            </ol>
+          </nav>
+          <h3>5.1 Error Handling</h3>
+          <div class="accordion mb-4" id="accordion-5.1">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-5.1-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5.1-1" aria-expanded="false" aria-controls="collapse-5.1-1">
+                  What error handling mechanisms are in place when working with hostname and IP address data?
+                </button>
+              </h2>
+              <div id="collapse-5.1-1" class="accordion-collapse collapse" aria-labelledby="heading-5.1-1" data-bs-parent="#accordion-5.1">
+                <div class="accordion-body">
+                  <p>When working with hostname and IP address data, the following error handling mechanisms are implemented to ensure data integrity and provide a smooth user experience:</p>
+                  <p>- <strong>Validation Checks</strong>: Input values are validated to ensure they are correctly formatted, which helps prevent invalid data entry. ✅</p>
+                  <p>- <strong>Try-Catch Blocks</strong>: Exception handling is employed using try-catch blocks to manage any errors that may arise during operations, such as file handling or data processing. &#128295;</p>
+                  <p>- <strong>User Notifications</strong>: Users are informed of any issues encountered through notifications, allowing them to take corrective actions. &#128226;</p>
+                  <p>- <strong>Data Integrity Assurance</strong>: Continuous checks are performed to maintain the integrity of the data being processed, ensuring reliable application behavior. ✨</p>
+                  <p>These mechanisms collectively enhance the robustness of the application when dealing with hostname and IP address data.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-5.2" class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-5.">5. Advanced Topics</a></li>
+              <li class="breadcrumb-item active" aria-current="page">5.2 UI Integration</li>
+            </ol>
+          </nav>
+          <h3>5.2 UI Integration</h3>
+          <div class="accordion mb-4" id="accordion-5.2">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-5.2-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5.2-1" aria-expanded="false" aria-controls="collapse-5.2-1">
+                  How does the `HostnameInfos` class interact with the user interface components of the application?
+                </button>
+              </h2>
+              <div id="collapse-5.2-1" class="accordion-collapse collapse" aria-labelledby="heading-5.2-1" data-bs-parent="#accordion-5.2">
+                <div class="accordion-body">
+                  <p>The `HostnameInfos` class plays a crucial role in the interaction between the user interface components and the underlying data model of the application. Here are the key points regarding its interaction:</p>
+                  <p>- <strong>Data Management</strong>: It provides a structured way to store and manage user input, ensuring that data entered into UI elements like `DataGridView` is organized and accessible. &#128202;</p>
+                  <p>- <strong>Data Display</strong>: The class supplies data that can be displayed in various UI elements, enabling users to view hostname and IP address pairs effectively. &#128421;️</p>
+                  <p>- <strong>User Input Reflection</strong>: Changes made by users in the UI are directly reflected in the underlying data model, allowing for a seamless user experience. &#128260;</p>
+                  <p>- <strong>Data Binding Capabilities</strong>: It supports data binding, which ensures that any updates to the data model are automatically reflected in the UI, enhancing responsiveness and reducing manual updates. &#128279;</p>
+                  <p>- <strong>Event Response</strong>: The class can respond to user actions, modifying its state based on interactions, thus maintaining synchronization between the UI and the data model. ⚙️</p>
+                  <p>Overall, the `HostnameInfos` class serves as a bridge between user interactions and the application&#39;s data logic, facilitating a dynamic and interactive user experience. ✨</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-5.3" class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-5.">5. Advanced Topics</a></li>
+              <li class="breadcrumb-item active" aria-current="page">5.3 DataGridView Functionality</li>
+            </ol>
+          </nav>
+          <h3>5.3 DataGridView Functionality</h3>
+          <div class="accordion mb-4" id="accordion-5.3">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-5.3-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5.3-1" aria-expanded="false" aria-controls="collapse-5.3-1">
+                  How does the `DataGridView` in `MainForm` facilitate user interaction with hostname and IP address data?
+                </button>
+              </h2>
+              <div id="collapse-5.3-1" class="accordion-collapse collapse" aria-labelledby="heading-5.3-1" data-bs-parent="#accordion-5.3">
+                <div class="accordion-body">
+                  <p>The `DataGridView` in `MainForm` facilitates user interaction with hostname and IP address data in several impactful ways:</p>
+                  <p>- <strong>Visual Representation</strong>: It provides a clear and organized visual grid, allowing users to easily see all entries at a glance. &#128202;</p>
+                  <p>- <strong>User-Friendly Interface</strong>: The tabular format enhances usability, making it intuitive for users to navigate through the data. &#128433;️</p>
+                  <p>- <strong>Data Management</strong>: Users can effortlessly add, edit, and remove entries directly within the grid, streamlining data management tasks. ✏️&#128465;️</p>
+                  <p>- <strong>Structured Format</strong>: The structured layout ensures that users can view, edit, and delete records in a consistent manner, improving accessibility. ✅</p>
+                  <p>Overall, the `DataGridView` significantly enhances the interaction experience by combining functionality with an easy-to-use interface. ✨</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-6." class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item active" aria-current="page">6. Troubleshooting &amp; FAQ</li>
+            </ol>
+          </nav>
+          <h2>6. Troubleshooting &amp; FAQ</h2>
+          <div class="accordion mb-4" id="accordion-6.">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-6.-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6.-1" aria-expanded="false" aria-controls="collapse-6.-1">
+                  What common issues might arise when using the `HostnameInfos` class, and how can they be resolved?
+                </button>
+              </h2>
+              <div id="collapse-6.-1" class="accordion-collapse collapse" aria-labelledby="heading-6.-1" data-bs-parent="#accordion-6.">
+                <div class="accordion-body">
+                  <p>When using the `HostnameInfos` class, several common issues may arise, primarily related to the format and validity of hostnames and IP addresses. Here are the key points to consider for resolving these issues:</p>
+                  <p>- <strong>Invalid or Empty Entries</strong>: Users may attempt to add invalid or empty hostnames or IP addresses. &#128721;</p>
+                  <p>  - <strong>Resolution</strong>: Implement validation checks before adding data to the collection. This ensures that only valid entries are processed. ✅</p>
+                  <p>- <strong>Format Issues</strong>: Hostnames and IP addresses must adhere to specific formats. Incorrect formats can lead to errors during processing. &#128295;</p>
+                  <p>  - <strong>Resolution</strong>: Introduce validation logic to check the format of hostnames and IP addresses prior to entry. This can include regex checks or built-in validation methods. ✨</p>
+                  <p>- <strong>User Feedback</strong>: Users may not be aware of the errors in their input, leading to frustration. &#128533;</p>
+                  <p>  - <strong>Resolution</strong>: Provide clear error messages and feedback when invalid data is entered. This helps users correct their inputs effectively. &#128226;</p>
+                  <p>By addressing these common issues with proper validation and user feedback, the functionality and user experience of the `HostnameInfos` class can be significantly improved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-7." class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item active" aria-current="page">7. Appendix</li>
+            </ol>
+          </nav>
+          <h2>7. Appendix</h2>
+          <div class="accordion mb-4" id="accordion-7.">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-7.-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-7.-1" aria-expanded="false" aria-controls="collapse-7.-1">
+                  Are there any additional resources or references for understanding the implementation of the `HostnameInfos` class?
+                </button>
+              </h2>
+              <div id="collapse-7.-1" class="accordion-collapse collapse" aria-labelledby="heading-7.-1" data-bs-parent="#accordion-7.">
+                <div class="accordion-body">
+                  <p>Additional resources or references for understanding the implementation of the `HostnameInfos` class include:</p>
+                  <p>- &#128218; <strong>C# Programming Documentation</strong>: Official documentation provides in-depth knowledge about the language and its features.</p>
+                  <p>- &#127760; <strong>.NET Framework Resources</strong>: Explore the .NET Framework documentation for insights into the libraries and tools available for development.</p>
+                  <p>- &#128421;️ <strong>Windows API Documentation</strong>: Useful for understanding file handling and other system-level operations relevant to the application.</p>
+                  <p>- &#127891; <strong>Tutorials on Windows Forms Applications</strong>: Step-by-step guides and tutorials can help you grasp the concepts of building Windows Forms applications effectively.</p>
+                  <p>- &#128172; <strong>Community Forums</strong>: Engage with community discussions on platforms like Stack Overflow to find solutions and share experiences related to similar applications.</p>
+                  <p>- &#128221; <strong>Code Comments</strong>: Review comments within the codebase for context and explanations directly related to the `HostnameInfos` class.</p>
+                  <p>- &#128214; <strong>Examples in Project Repository</strong>: Check for practical examples and implementations provided within the project repository to see the class in action.</p>
+                  <p>Utilizing these resources will enhance your understanding and implementation skills related to the `HostnameInfos` class. ✨</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-8." class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item active" aria-current="page">8. Application Architecture</li>
+            </ol>
+          </nav>
+          <h2>8. Application Architecture</h2>
+          <ul class="subsection-list">
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-8.1">8.1 Application Initialization</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-8.2">8.2 Main Form Execution</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-8.3">8.3 Resource Management</a></li>
+            <li><a class="btn btn-sm btn-link ps-0" data-target="section-8.4">8.4 Application Settings Management</a></li>
+          </ul>
+          <div class="accordion mb-4" id="accordion-8.">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-8.-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-8.-1" aria-expanded="false" aria-controls="collapse-8.-1">
+                  How does the `Program` class serve as the entry point for the application and what are its responsibilities?
+                </button>
+              </h2>
+              <div id="collapse-8.-1" class="accordion-collapse collapse" aria-labelledby="heading-8.-1" data-bs-parent="#accordion-8.">
+                <div class="accordion-body">
+                  <p>The `Program` class serves as the entry point for the application, encapsulating the following key responsibilities:</p>
+                  <p>- <strong>Main Method</strong>: It contains the `Main` method, which is the starting point of the application execution. &#127937;</p>
+                  <p>- <strong>Application Initialization</strong>: The class is responsible for initializing the application environment, ensuring that all necessary components are set up before the application runs. &#128295;</p>
+                  <p>- <strong>User Interface Launch</strong>: It starts the Windows Forms application, launching the user interface for user interaction. &#128421;️</p>
+                  <p>- <strong>Message Loop</strong>: The `Main` method also initiates the message loop, which is essential for processing events and user inputs within the application. &#128260;</p>
+                  <p>Overall, the `Program` class plays a crucial role in setting up and starting the application, ensuring a smooth user experience from the moment the application is launched. ✨</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-8.1" class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-8.">8. Application Architecture</a></li>
+              <li class="breadcrumb-item active" aria-current="page">8.1 Application Initialization</li>
+            </ol>
+          </nav>
+          <h3>8.1 Application Initialization</h3>
+          <div class="accordion mb-4" id="accordion-8.1">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-8.1-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-8.1-1" aria-expanded="false" aria-controls="collapse-8.1-1">
+                  What steps are taken in the `Main` method to initialize the application environment?
+                </button>
+              </h2>
+              <div id="collapse-8.1-1" class="accordion-collapse collapse" aria-labelledby="heading-8.1-1" data-bs-parent="#accordion-8.1">
+                <div class="accordion-body">
+                  <p>In the `Main` method of the application, several key steps are taken to initialize the application environment:</p>
+                  <p>- ✨ <strong>Enable Visual Styles</strong>: This enhances the appearance of the application by applying the current Windows theme.</p>
+                  <p>- &#128295; <strong>Set Compatible Text Rendering</strong>: Ensures that text is rendered correctly across different environments.</p>
+                  <p>- ✅ <strong>Configure Application Settings</strong>: Loads necessary settings that dictate how the application behaves.</p>
+                  <p>- &#128230; <strong>Initialize Resources</strong>: Prepares any resources required for the application to function properly.</p>
+                  <p>- &#128421;️ <strong>Prepare the Main Form</strong>: Sets up the main user interface for display, ensuring it is ready for user interaction.</p>
+                  <p>- &#128220; <strong>Handle Startup Parameters</strong>: Processes any command-line arguments that may influence the application&#39;s startup behavior.</p>
+                  <p>- &#128736;️ <strong>Configure Logging</strong>: Sets up logging mechanisms to capture runtime information and errors.</p>
+                  <p>These steps collectively ensure a smooth and efficient startup for the application, providing a robust environment for users.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-8.2" class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-8.">8. Application Architecture</a></li>
+              <li class="breadcrumb-item active" aria-current="page">8.2 Main Form Execution</li>
+            </ol>
+          </nav>
+          <h3>8.2 Main Form Execution</h3>
+          <div class="accordion mb-4" id="accordion-8.2">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-8.2-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-8.2-1" aria-expanded="false" aria-controls="collapse-8.2-1">
+                  How does the application transition to the `MainForm` after initialization?
+                </button>
+              </h2>
+              <div id="collapse-8.2-1" class="accordion-collapse collapse" aria-labelledby="heading-8.2-1" data-bs-parent="#accordion-8.2">
+                <div class="accordion-body">
+                  <p>The application transitions to the `MainForm` after initialization through the following process:</p>
+                  <p>- The application creates an instance of the `MainForm` class. &#128736;️</p>
+                  <p>- It then calls `Application.Run(new MainForm())`, which starts the message loop for the form, displaying it to the user and processing user input. &#128260;</p>
+                  <p>- Alternatively, in some instances, the `Show()` method of the `MainForm` is called directly to display the form. &#128242;</p>
+                  <p>This ensures that the `MainForm` is presented to the user effectively, allowing for interaction with the application. ✅</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-8.3" class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-8.">8. Application Architecture</a></li>
+              <li class="breadcrumb-item active" aria-current="page">8.3 Resource Management</li>
+            </ol>
+          </nav>
+          <h3>8.3 Resource Management</h3>
+          <div class="accordion mb-4" id="accordion-8.3">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-8.3-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-8.3-1" aria-expanded="false" aria-controls="collapse-8.3-1">
+                  How does the `Resources` class facilitate access to application resources and manage localization?
+                </button>
+              </h2>
+              <div id="collapse-8.3-1" class="accordion-collapse collapse" aria-labelledby="heading-8.3-1" data-bs-parent="#accordion-8.3">
+                <div class="accordion-body">
+                  <p>The `Resources` class plays a crucial role in facilitating access to application resources and managing localization in the following ways:</p>
+                  <p>- <strong>Centralized Management</strong>: It provides a centralized way to manage various resources such as strings, images, and other assets, ensuring consistency across the application. &#128450;️</p>
+                  <p>- <strong>Strongly Typed Interface</strong>: The class offers a strongly typed interface, which simplifies the retrieval of localized strings and resources, reducing the likelihood of errors during development. &#128269;</p>
+                  <p>- <strong>Localization Support</strong>: It supports localization by allowing resource strings to be translated and by loading culture-specific resources based on the current culture settings. &#127757;</p>
+                  <p>- <strong>Asset Handling</strong>: The `Resources` class manages not only strings but also images and other assets, making it a comprehensive solution for resource management. &#127912;</p>
+                  <p>- <strong>Ease of Use</strong>: By providing a single point of access for all resources, it enhances the ease of use for developers, allowing them to focus on application logic rather than resource management. ✅</p>
+                  <p>Overall, the `Resources` class is essential for creating a user-friendly and localized application experience. ✨</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="section-8.4" class="section-heading">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-home">Manual</a></li>
+              <li class="breadcrumb-item"><a class="btn btn-sm btn-link ps-0" data-target="section-8.">8. Application Architecture</a></li>
+              <li class="breadcrumb-item active" aria-current="page">8.4 Application Settings Management</li>
+            </ol>
+          </nav>
+          <h3>8.4 Application Settings Management</h3>
+          <div class="accordion mb-4" id="accordion-8.4">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-8.4-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-8.4-1" aria-expanded="false" aria-controls="collapse-8.4-1">
+                  How does the `Settings` class provide a thread-safe access point to application settings?
+                </button>
+              </h2>
+              <div id="collapse-8.4-1" class="accordion-collapse collapse" aria-labelledby="heading-8.4-1" data-bs-parent="#accordion-8.4">
+                <div class="accordion-body">
+                  <p>The `Settings` class provides a thread-safe access point to application settings through the following mechanisms:</p>
+                  <p>- <strong>Synchronization Mechanisms</strong>: It employs built-in synchronization techniques to ensure that settings can be accessed and modified safely across multiple threads, preventing data corruption and conflicts. &#128274;</p>
+                  <p>- <strong>Safe Read and Write Operations</strong>: The class allows settings to be read and written safely, ensuring that concurrent operations do not interfere with each other. ✅</p>
+                  <p>- <strong>Utilization of .NET Features</strong>: By leveraging .NET&#39;s configuration management features, the `Settings` class guarantees a robust framework for managing application settings in a multi-threaded environment. ✨</p>
+                  <p>This design ensures that developers can confidently manage application settings without worrying about thread-related issues.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+    document.addEventListener('DOMContentLoaded', function() {
+      const allSections = document.querySelectorAll('.section-heading');
+      // Afficher la section 'home' par défaut
+      const home = document.getElementById('section-home');
+      if (home) home.classList.add('active');
+      // Attacher click à tous les éléments ayant data-target
+      document.querySelectorAll('[data-target]').forEach(link => {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          const targetId = this.getAttribute('data-target');
+          if (!targetId) return;
+          allSections.forEach(sec => sec.classList.remove('active'));
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            targetSection.classList.add('active');
+            window.scrollTo({ top: targetSection.offsetTop - 20, behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

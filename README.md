@@ -3,3 +3,4 @@ Tool to manage your hosts file and not care anymore about copy the hosts file on
 
 ![](README_content/hosts.png)
 
+[More complete online documentation](./README/manual.en.html)

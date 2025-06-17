@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Viewer Markdown</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 1rem;
+      line-height: 1.6;
+    }
+    #open-dir {
+      display: none;
+      margin-bottom: 1rem;
+    }
+    #content {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+    a { color: #0366d6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    pre, code {
+      background: #f6f8fa;
+      padding: .2em .4em;
+      border-radius: 3px;
+    }
+    pre { padding: 1em; overflow-x: auto; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <button id="open-dir">Ouvrir le dossier racine (.md)</button>
+  <div id="content">Chargement…</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    let rootHandle = null;
+
+    // Lit un fichier soit via File System Access, soit via fetch
+    async function fetchMarkdown(path) {
+      if (rootHandle) {
+        try {
+          // Parcours du chemin relatif
+          const parts = path.split('/');
+          let handle = rootHandle;
+          for (let i = 0; i < parts.length - 1; i++) {
+            handle = await handle.getDirectoryHandle(parts[i]);
+          }
+          const fileHandle = await handle.getFileHandle(parts.at(-1));
+          const file = await fileHandle.getFile();
+          return await file.text();
+        } catch (e) {
+          throw new Error('FS API : ' + e.message);
+        }
+      } else {
+        // Chargement normal (nécessite HTTP/S)
+        const res = await fetch(path);
+        if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+        return await res.text();
+      }
+    }
+
+    async function loadMarkdown(path) {
+      document.getElementById('content').innerHTML = 'Chargement…';
+      try {
+        const md = await fetchMarkdown(path);
+        document.getElementById('content').innerHTML = marked.parse(md);
+      } catch (err) {
+        document.getElementById('content').innerHTML =
+          `<p class="error">Erreur de chargement : ${err.message}</p>`;
+      }
+    }
+
+    function getPageFromUrl() {
+      const p = new URLSearchParams(window.location.search).get('page');
+      return p || 'index.md';
+    }
+
+    function updateUrl(path) {
+      const u = new URL(window.location);
+      u.searchParams.set('page', path);
+      window.history.pushState({ page: path }, '', u);
+    }
+
+    document.body.addEventListener('click', e => {
+      const a = e.target.closest('a');
+      if (a && a.getAttribute('href')?.endsWith('.md')) {
+        e.preventDefault();
+        const href = a.getAttribute('href');
+        updateUrl(href);
+        loadMarkdown(href);
+      }
+    });
+
+    window.addEventListener('popstate', e => {
+      const path = (e.state && e.state.page) || getPageFromUrl();
+      loadMarkdown(path);
+    });
+
+    // Initialisation
+    document.addEventListener('DOMContentLoaded', async () => {
+      const btn = document.getElementById('open-dir');
+      // Si protocole file://, on propose l’ouverture du dossier
+      if (location.protocol === 'file:'
+          && 'showDirectoryPicker' in window) {
+        btn.style.display = 'inline-block';
+        btn.addEventListener('click', async () => {
+          try {
+            rootHandle = await window.showDirectoryPicker();
+            btn.style.display = 'none';
+            loadMarkdown(getPageFromUrl());
+          } catch (e) {
+            alert('Ouverture annulée ou erreur : ' + e.message);
+          }
+        });
+        document.getElementById('content').innerHTML =
+          '<p>Sélectionnez d\'abord le dossier contenant vos fichiers Markdown.</p>';
+      } else {
+        // Chargement direct (fetch)
+        loadMarkdown(getPageFromUrl());
+      }
+    });
+  </script>
+</body>
+</html>
